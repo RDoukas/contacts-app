@@ -6,7 +6,7 @@ class Api::ContactsController < ApplicationController
   end 
 
   def show 
-    @contacts = Contact.find_by(id: params[:id])
+    @contact = Contact.find_by(id: params[:id])
     render "show.json.jb"
   end 
 
@@ -37,10 +37,10 @@ class Api::ContactsController < ApplicationController
   end 
   
   def destroy
-    @contact = Contacts.find_by(id: params[:id])
-    
+    @contact = Contact.find_by(id: params[:id])
     @contact.destroy
-    render json:{message: "The contact has been destroyed."}
+
+    render json: {message: "The contact has been destroyed."}
   end 
 
 
