@@ -1,14 +1,6 @@
 @contacts.map do |contact|
-  {
-    id: contact.id, 
-    first_name: contact.first_name, 
-    last_name: contact.last_name,
-    email: contact.email,
-    phone_number: contact.phone_number,
-    formatted: {
-      japanese_number: contact.japanese_number
-    }
-  }
+  render partial: "contact.json.jb",
+  locals: {contact: contact}
 end 
 
 
