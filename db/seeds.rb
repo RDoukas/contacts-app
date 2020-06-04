@@ -1,12 +1,17 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-
-# contact = Contact.new(first_name: "Gina", last_name: "Maloto", email: "GinaPatricia@gmail.com", phone_number: "6305559000")
-# contact.save
-
-
-
-
+Contact.create!([
+  {first_name: "Rebecca", last_name: "Doukas", email: "rrdoukas@gmail.com", phone_number: "6309476999", middle_name: nil, bio: nil, latitude: nil, longitude: nil},
+  {first_name: "Johny", last_name: "Smiths", email: "pilgrams@gmail.com", phone_number: "3127789478", middle_name: nil, bio: nil, latitude: nil, longitude: nil},
+  {first_name: "Suzy", last_name: "Snowflakes", email: "flakes@yahoo.com", phone_number: "63046825789", middle_name: nil, bio: nil, latitude: nil, longitude: nil},
+  {first_name: "Antoinesse", last_name: "Wooley", email: "antoinesse@gmail.com", phone_number: "2197738693", middle_name: nil, bio: nil, latitude: nil, longitude: nil},
+  {first_name: "Judy", last_name: "Dawson", email: "CocoChannel97@gmail.com", phone_number: "7738590030", middle_name: nil, bio: nil, latitude: nil, longitude: nil},
+  {first_name: "Stephanie", last_name: "DeRe", email: "ArtQueen@gmail.com", phone_number: "7094569903", middle_name: nil, bio: nil, latitude: nil, longitude: nil},
+  {first_name: "Phil", last_name: "Doukas", email: "PGDoukas@aol.com", phone_number: "8472557500", middle_name: nil, bio: nil, latitude: nil, longitude: nil},
+  {first_name: "Tori", last_name: "Davis", email: "VDavis@gmail.com", phone_number: "6309992456", middle_name: nil, bio: nil, latitude: nil, longitude: nil},
+  {first_name: "Beth", last_name: "Hurst", email: "EHurst@nchs.edu", phone_number: "6305879966", middle_name: nil, bio: nil, latitude: nil, longitude: nil},
+  {first_name: "Diamonte", last_name: "Harper", email: "Saweetie@gmail.com", phone_number: "5109956979", middle_name: nil, bio: nil, latitude: nil, longitude: nil},
+  {first_name: "Julia", last_name: "Child", email: "JChild@gmail.com", phone_number: "4049956979", middle_name: "Carolyn", bio: "She was an American cooking teacher, author, and television personality. She is recognized for bringing French cuisine to the American public with her debut cookbook, Mastering the Art of French Cooking, and her subsequent television programs, the most notable of which was The French Chef, which premiered in 1963.", latitude: nil, longitude: nil},
+  {first_name: "Belcalis", last_name: "Almanzar", email: "CardB@gmail.com", phone_number: "7189935800", middle_name: "Marlenis", bio: "Known professionally as Cardi B, is an American rapper, songwriter, television personality, and actress.[1] Born in Manhattan and raised in The Bronx, New York City. Her debut studio album, Invasion of Privacy (2018), debuted at number one on the Billboard 200, broke several streaming records, was certified triple platinum by the RIAA and named by Billboard the top female rap album of the 2010s. Critically acclaimed, it won the Grammy Award for Best Rap Album, making Cardi B the only woman to win the award as a solo artist.", latitude: nil, longitude: nil},
+  {first_name: "Quavious", last_name: "Marshall", email: "Quavo@gmail.com", phone_number: "4049956979", middle_name: "Keyate", bio: "Known professionally as Quavo, iis an American rapper, singer, songwriter, and record producer. He is best known as a member of the hip hop and trap music trio Migos. Quavo is related to his fellow Migos members, being Takeoff's uncle and Offset's cousin.", latitude: nil, longitude: nil},
+  {first_name: "Audrey", last_name: "Heppurn", email: "Tiffany@gmail.com", phone_number: "4049959078", middle_name: "Lynn", bio: "Amazing actress.", latitude: 41.988054, longitude: -87.669707},
+  {first_name: "Clifford", last_name: "Harris", email: "TI@gmail.com", phone_number: "4049956979", middle_name: "Joseph", bio: "Known by his stage names T.I. and Tip (often stylized as TIP or T.I.P.), is an American rapper, singer, actor, songwriter, producer, entrepreneur, record executive, and author. Harris signed his first major-label record deal in 1999 with Arista subsidiary LaFace. In 2001, Harris formed the Southern hip hop group P$C, alongside his longtime friends and fellow Atlanta-based rappers Big Kuntry King, Mac Boney, and C-Rod. Upon being released from Arista, Harris signed to Atlantic and subsequently became the co-chief executive officer (CEO) of his own label imprint, Grand Hustle Records, which he launched in 2003.[2][3] Harris is also known as one of the artists who popularized the hip hop subgenre trap music, along with Jeezy and Gucci Mane.", latitude: 41.988054, longitude: -87.669707}
+])

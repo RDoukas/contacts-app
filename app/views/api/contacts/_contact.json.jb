@@ -7,7 +7,10 @@
   email:contact.email, 
   phone_number:contact.phone_number,
   bio:contact.bio,
+  longitude: contact.longitude,
+  latitude: contact.latitude,
   updated_at:contact.updated_at,
+  address: contact.address,
   formatted: {
     updated_at:contact.friendly_updated_at,
     phone_number:contact.japanese_number

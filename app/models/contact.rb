@@ -13,4 +13,8 @@ class Contact < ApplicationRecord
     japanese_number += phone_number
   end 
 
+  def address 
+    Geocoder.search([latitude, longitude]).first.address
+  end 
+
 end
