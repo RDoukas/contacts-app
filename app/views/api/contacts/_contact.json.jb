@@ -10,7 +10,7 @@
   longitude: contact.longitude,
   latitude: contact.latitude,
   updated_at:contact.updated_at,
-  address: contact.address,
+  # address: contact.address,
   formatted: {
     updated_at:contact.friendly_updated_at,
     phone_number:contact.japanese_number
