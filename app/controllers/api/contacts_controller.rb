@@ -1,11 +1,16 @@
 class Api::ContactsController < ApplicationController
 
   def index
-    @contacts = Contact.all
-    if params[:search]
-      @contacts = @contacts.where("first_name iLike ? OR last_name iLIKE ? OR middle_name iLIKE ? OR email iLIKE ? OR bio iLike ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
-    end 
+    if current_user
+    @contacts = current_user.contacts
+      # if params[:search]
+      # @contacts = @contacts.where("first_name iLike ? OR last_name iLIKE ? OR middle_name iLIKE ? OR email iLIKE ? OR bio iLike ?", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%", "%#{params[:search]}%")
+      # end 
     render "index.json.jb"
+    else 
+      render json: []
+    end 
+
   end 
 
   def show 
@@ -16,7 +21,6 @@ class Api::ContactsController < ApplicationController
   def create
     coordinates = Geocoder.coordinates(params[:address])
     @contact = Contact.new(
-      id: params[:id],
       first_name: params[:first_name],
       middle_name: params[:middle_name],
       last_name: params[:last_name],
@@ -24,8 +28,11 @@ class Api::ContactsController < ApplicationController
       phone_number: params[:phone_number],
       bio: params[:bio],
       latitude: coordinates[0],
-      longitude: coordinates[1]
+      longitude: coordinates[1],
+      user_id: current_user.id
     )
+
+
   
     if @contact.save
       render "show.json.jb"
@@ -37,12 +44,6 @@ class Api::ContactsController < ApplicationController
   def update 
     @contact = Contact.find_by(id: params[:id])
 
-    # if params[:address]
-    #   coordinates = Geocoder.coordinates(params[:address])
-    #   @contact.latitude = coordinates[0]
-    #   @contact.longitude = coordinates[1]
-    # end 
-    
     @contact.id = params[:id] || @contact.id
     @contact.first_name = params[:first_name] || @contact.first_name
     @contact.middle_name = params[:middle_name] || @contact.middle_name
@@ -52,7 +53,7 @@ class Api::ContactsController < ApplicationController
     @contact.bio = params[:bio] || @contact.bio
     @contact.latitude = params[:latitude] || @contact.latitude
     @contact.longitude = params[:longitude] || @contact.longitude
-
+    
 
 
     if @contact.save

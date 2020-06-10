@@ -1,8 +1,10 @@
 class Contact < ApplicationRecord
 
+
   validates :first_name, :last_name, presence: true
   validates :email, uniqueness: true, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i}
 
+  belongs_to :user
 
   def friendly_updated_at
     updated_at.strftime("%b %e, %l:%M %p")
@@ -20,5 +22,6 @@ class Contact < ApplicationRecord
   def address 
     Geocoder.search([latitude, longitude]).first.address
   end 
+  
 
 end
