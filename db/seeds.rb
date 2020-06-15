@@ -15,3 +15,7 @@ Contact.create!([
   {first_name: "Audrey", last_name: "Heppurn", email: "Tiffany@gmail.com", phone_number: "4049959078", middle_name: "Lynn", bio: "Amazing actress.", latitude: 41.988054, longitude: -87.669707},
   {first_name: "Clifford", last_name: "Harris", email: "TI@gmail.com", phone_number: "4049956979", middle_name: "Joseph", bio: "Known by his stage names T.I. and Tip (often stylized as TIP or T.I.P.), is an American rapper, singer, actor, songwriter, producer, entrepreneur, record executive, and author. Harris signed his first major-label record deal in 1999 with Arista subsidiary LaFace. In 2001, Harris formed the Southern hip hop group P$C, alongside his longtime friends and fellow Atlanta-based rappers Big Kuntry King, Mac Boney, and C-Rod. Upon being released from Arista, Harris signed to Atlantic and subsequently became the co-chief executive officer (CEO) of his own label imprint, Grand Hustle Records, which he launched in 2003.[2][3] Harris is also known as one of the artists who popularized the hip hop subgenre trap music, along with Jeezy and Gucci Mane.", latitude: 41.988054, longitude: -87.669707}
 ])
+
+
+# ContactGroup.create(group_id: 1, contact_id:16)
+
