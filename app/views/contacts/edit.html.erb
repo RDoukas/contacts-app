@@ -1,0 +1,16 @@
+<h1>Edit Contact</h1>
+
+<form action="/contacts/<%= @contact.id %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <div>
+    Firt Name: <input type="text" name="first_name" value="<%= @first_name %>">
+  </div>
+  <div>
+    Middle Name: <input type="text" name="middle_name" value="<%= @middle_name %>">
+  </div>
+  <div>
+    Last Name: <input type="text" name="last_name" value="<%= @last_name %>">
+  </div>
+  <div>
+    Email: <input type="text" name="email" value="<%= @email %>">
+  </div>
