@@ -8,3 +8,5 @@
   <h4>Latitude: <%= @contact.latitude %></h4>
   <h4>Longitude: <%= @contact.longitude %></h4>
   
+    <a href="/contacts/<%= @contact.id %>/edit">Edit</a>
+  <a href="/contacts/<%= @contact.id %>" data-method="delete">Delete</a>

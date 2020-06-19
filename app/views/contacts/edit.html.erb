@@ -3,14 +3,29 @@
 <form action="/contacts/<%= @contact.id %>" method="post">
   <input type="hidden" name="_method" value="patch">
   <div>
-    Firt Name: <input type="text" name="first_name" value="<%= @first_name %>">
+    Firt Name: <input type="text" name="first_name" value="<%= @contact.first_name %>">
   </div>
   <div>
-    Middle Name: <input type="text" name="middle_name" value="<%= @middle_name %>">
+    Middle Name: <input type="text" name="middle_name" value="<%= @contact.middle_name %>">
   </div>
   <div>
-    Last Name: <input type="text" name="last_name" value="<%= @last_name %>">
+    Last Name: <input type="text" name="last_name" value="<%= @contact.last_name %>">
   </div>
   <div>
-    Email: <input type="text" name="email" value="<%= @email %>">
+    Email: <input type="text" name="email" value="<%= @contact.email %>">
   </div>
+  <div>
+    Groups: <input type="text" name="groups" value="<%= @contact.groups %>">
+  </div>
+  <div>
+    Bio: <input type="text" name="bio" value="<%= @contact.bio %>">
+  </div>
+  <div>
+    Latitude: <input type="text" name="latitude" value="<%= @contact.latitude %>">
+  <div>
+    Longitude: <input type="text" name="longitude" value="<%= @contact.longitude %>">
+  </div>
+    <div>
+    <button type="submit">Update Contact</button>
+  </div>
+</form>
