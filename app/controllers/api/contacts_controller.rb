@@ -20,15 +20,16 @@ class Api::ContactsController < ApplicationController
       middle_name: params[:middle_name],
       last_name: params[:last_name],
       email: params[:email],
+      # address: params[:address],
       phone_number: params[:phone_number],
       bio: params[:bio],
       user_id: current_user.id
     )
-    if params[:address]
-      coordinates = Geocoder.coordinates(params[:address])
-      @contact.latitude = coordinates[0]
-      @contact.longitude = coordinates[1]
-    end
+    # if params[:address]
+    #   coordinates = Geocoder.coordinates(params[:address])
+    #   @contact.latitude = coordinates[0]
+    #   @contact.longitude = coordinates[1]
+    # end
     if @contact.save
       render 'show.json.jb'
     else

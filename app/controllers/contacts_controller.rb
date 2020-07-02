@@ -20,6 +20,7 @@ class ContactsController < ApplicationController
       middle_name: params[:middle_name],
       last_name: params[:last_name],
       email: params[:email],
+      phone_number: params[:phone_number],
       groups: params[:groups],
       bio: params[:bio],
       latitude: params[:latitude],
@@ -39,15 +40,16 @@ class ContactsController < ApplicationController
     @contact.first_name = params[:first_name]
     @contact.middle_name = params[:middle_name]
     @contact.last_name = params[:last_name]
-    # @contact.email = params[:email]
+    @contact.email = params[:email]
+    @contact.phone_number = params[:phone_number]
     # @contact.groups = params[:groups]
-    # @contact.bio = params[:bio]
-    # @contact.latitude = params[:latitude]
-    # @contact.longitude = params[:longitude]
+    @contact.bio = params[:bio]
+    @contact.latitude = params[:latitude]
+    @contact.longitude = params[:longitude]
     
     
     if @contact.save
-    redirect_to "/contacts/#{@contact.id}"
+      redirect_to "/contacts/"
     else
       render json: {errors: @contact.errors.full_messages}, status: :unprocessable_entity
     end
